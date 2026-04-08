@@ -1,18 +1,11 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { MessageCircle, ArrowUp } from "lucide-react"; 
+import { MessageCircle, ArrowUp } from "lucide-react";
 import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import { PC, pCats, pList } from "@/lib/data";
-import {
-  waLink,
-  GOLD,
-  TEXT_WARM,
-  TEXT_SEC,
-  TEXT_MUTED,
-  SEC_IDS,
-} from "@/lib/utils";
+import { waLink, GOLD, TEXT_WARM, TEXT_SEC, TEXT_MUTED } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import TeamSection from "@/components/TeamSection";
 import GallerySection from "@/components/GallerySection";
@@ -20,7 +13,7 @@ import WhyUsSection from "@/components/WhyUsSection";
 import Footer from "@/components/Footer";
 import PromosSection from "@/components/PromoSection";
 import ContactSection from "@/components/ContactSection";
-import CompactStrip from "@/components/Marquee";
+import CompactStrip from "@/components/Marquee"; // Upewnij się, że to jest CompactStrip, jeśli nie, podmień import
 
 export default function EternitySpa() {
   const [showTop, setShowTop] = useState(false);
@@ -68,26 +61,26 @@ export default function EternitySpa() {
       {/* ===== HERO ===== */}
       <Hero />
 
-      {/* ===== PASEK INFORMACYJNY) ===== */}
+      {/* ===== PASEK INFORMACYJNY ===== */}
       <CompactStrip />
 
       {/* ===== O NAS  ===== */}
       <section
-        id="o nas"
-        className="fade-section relative py-28 md:py-40 px-6 overflow-hidden"
+        id="o-nas"
+        className="fade-section relative py-16 md:py-40 px-4 md:px-6 overflow-hidden"
       >
         <div
-          className="absolute top-8 left-6 md:left-12 text-[180px] font-extralight leading-none pointer-events-none select-none"
+          className="absolute top-8 left-6 md:left-12 text-[100px] md:text-[180px] font-extralight leading-none pointer-events-none select-none"
           style={{ color: "rgba(201,168,76,0.03)" }}
         >
           01
         </div>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div className="relative flex items-center justify-center">
-            <div className="absolute w-72 h-72 md:w-96 md:h-96 border border-[#C9A84C]/[0.07] rotate-45 rounded-sm" />
-            <div className="absolute w-52 h-52 md:w-72 md:h-72 border border-[#C9A84C]/[0.04] rotate-45 rounded-sm" />
+            <div className="absolute w-48 h-48 md:w-72 md:w-96 border border-[#C9A84C]/[0.07] rotate-45 rounded-sm" />
+            <div className="absolute w-32 h-32 md:w-52 md:h-72 border border-[#C9A84C]/[0.04] rotate-45 rounded-sm" />
             <div
-              className="relative w-64 h-80 md:w-80 md:h-[420px] rounded-2xl overflow-hidden border border-white/[0.06]"
+              className="relative w-56 h-64 md:w-80 md:h-[420px] rounded-2xl overflow-hidden border border-white/[0.06]"
               style={{ background: "rgba(255,255,255,0.02)" }}
             >
               <img
@@ -109,7 +102,7 @@ export default function EternitySpa() {
               O nas
             </span>
             <h2
-              className="text-3xl md:text-[2.5rem] font-extralight tracking-tight mb-8 leading-[1.15]"
+              className="text-2xl md:text-[2.5rem] font-extralight tracking-tight mb-6 md:mb-8 leading-[1.15]"
               style={{ color: TEXT_WARM }}
             >
               Przestrzeń stworzona
@@ -119,7 +112,7 @@ export default function EternitySpa() {
               </span>
             </h2>
             <div
-              className="space-y-5 text-[15px] leading-[1.9]"
+              className="space-y-4 md:space-y-5 text-[14px] md:text-[15px] leading-[1.8]"
               style={{ color: TEXT_SEC }}
             >
               <p>
@@ -136,18 +129,18 @@ export default function EternitySpa() {
                 premium.
               </p>
             </div>
-            <div className="grid grid-cols-3 gap-6 mt-12 pt-10 border-t border-white/[0.06]">
+            <div className="grid grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-12 pt-8 md:pt-10 border-t border-white/[0.06]">
               {[
                 { v: "500+", l: "Klientek" },
                 { v: "8+", l: "Lat exp." },
                 { v: "25+", l: "Zabiegów" },
               ].map((s, i) => (
                 <div key={i}>
-                  <div className="text-2xl font-light text-[#C9A84C]">
+                  <div className="text-xl md:text-2xl font-light text-[#C9A84C]">
                     {s.v}
                   </div>
                   <div
-                    className="text-[11px] mt-1 tracking-wide"
+                    className="text-[10px] md:text-[11px] mt-1 tracking-wide"
                     style={{ color: TEXT_MUTED }}
                   >
                     {s.l}
@@ -162,24 +155,24 @@ export default function EternitySpa() {
       {/* ===== ZESPÓŁ ===== */}
       <TeamSection />
 
-      {/* ===== CENNIK ===== */}
+      {/* ===== CENNIK  ===== */}
       <section
         id="cennik"
-        className="fade-section relative py-28 md:py-40 px-6"
+        className="fade-section relative py-16 md:py-40 px-4 md:px-6"
       >
         <div
-          className="absolute top-8 right-6 md:right-12 text-[180px] font-extralight leading-none pointer-events-none select-none"
+          className="absolute top-8 right-6 md:right-12 text-[100px] md:text-[180px] font-extralight leading-none pointer-events-none select-none"
           style={{ color: "rgba(201,168,76,0.03)" }}
         >
           03
         </div>
         <div className="relative max-w-3xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             <span className="text-[11px] tracking-[0.3em] uppercase text-[#C9A84C] mb-5 block">
               Cennik
             </span>
             <h2
-              className="text-3xl md:text-[2.5rem] font-extralight tracking-tight"
+              className="text-2xl md:text-[2.5rem] font-extralight tracking-tight"
               style={{ color: TEXT_WARM }}
             >
               Karta <span className="text-[#C9A84C] font-light">zabiegów</span>
@@ -187,7 +180,7 @@ export default function EternitySpa() {
           </div>
 
           <div
-            className="flex flex-wrap justify-center gap-1.5 mb-14 p-1.5 rounded-2xl"
+            className="flex flex-wrap justify-center gap-1.5 mb-10 md:mb-14 p-1.5 rounded-2xl"
             style={{
               background: "rgba(201,168,76,0.04)",
               border: "1px solid rgba(201,168,76,0.08)",
@@ -197,7 +190,7 @@ export default function EternitySpa() {
               <button
                 key={c.k}
                 onClick={() => setPriceTab(c.k)}
-                className={`relative flex items-center gap-1.5 text-[11px] tracking-[0.08em] uppercase px-5 py-2.5 rounded-xl transition-all duration-300 ${priceTab === c.k ? "text-black font-semibold shadow-[0_4px_15px_rgba(201,168,76,0.25)]" : "text-[#8A8278] hover:text-[#F5F0E8]"}`}
+                className={`relative flex items-center gap-1.5 text-[10px] md:text-[11px] tracking-[0.08em] uppercase px-4 md:px-5 py-2 md:py-2.5 rounded-xl transition-all duration-300 ${priceTab === c.k ? "text-black font-semibold shadow-[0_4px_15px_rgba(201,168,76,0.25)]" : "text-[#8A8278] hover:text-[#F5F0E8]"}`}
                 style={
                   priceTab === c.k
                     ? {
@@ -228,18 +221,21 @@ export default function EternitySpa() {
               }}
             />
 
-            <div className="pt-10 pb-6 px-10 text-center relative">
-              <div className="flex items-center justify-center gap-3 mb-5">
-                <div className="w-16 h-px bg-[#C9A84C]/40" />
+            <div className="pt-8 md:pt-10 pb-4 md:pb-6 px-6 md:px-10 text-center relative">
+              <div className="flex items-center justify-center gap-3 mb-3 md:mb-5">
+                <div className="w-12 h-px md:w-16 bg-[#C9A84C]/40" />
                 <div className="w-1.5 h-1.5 rotate-45 bg-[#C9A84C]/60" />
-                <div className="w-16 h-px bg-[#C9A84C]/40" />
+                <div className="w-12 h-px md:w-16 bg-[#C9A84C]/40" />
               </div>
-              <h3 className="text-lg tracking-[0.25em] uppercase text-[#C9A84C] font-light">
+              <h3 className="text-base md:text-lg tracking-[0.25em] uppercase text-[#C9A84C] font-light">
                 {pCats.find((c) => c.k === priceTab)?.l}
               </h3>
             </div>
 
-            <div key={priceTab} className="menu-list-anim px-8 md:px-12 pb-10">
+            <div
+              key={priceTab}
+              className="menu-list-anim px-6 md:px-8 md:px-12 pb-8 md:pb-10"
+            >
               {pList[priceTab].map((item, i) => (
                 <ServiceCard
                   key={item.n}
@@ -252,14 +248,14 @@ export default function EternitySpa() {
               ))}
             </div>
 
-            <div className="pb-8 px-10 text-center">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <div className="w-16 h-px bg-[#C9A84C]/40" />
+            <div className="pb-6 md:pb-8 px-6 md:px-10 text-center">
+              <div className="flex items-center justify-center gap-3 mb-3 md:mb-4">
+                <div className="w-12 h-px md:w-16 bg-[#C9A84C]/40" />
                 <div className="w-1.5 h-1.5 rotate-45 bg-[#C9A84C]/60" />
-                <div className="w-16 h-px bg-[#C9A84C]/40" />
+                <div className="w-12 h-px md:w-16 bg-[#C9A84C]/40" />
               </div>
               <p
-                className="text-[10px] tracking-[0.15em] uppercase"
+                className="text-[9px] md:text-[10px] tracking-[0.15em] uppercase"
                 style={{ color: TEXT_MUTED }}
               >
                 Ceny orientacyjne — ostateczna wycena po konsultacji
@@ -272,8 +268,6 @@ export default function EternitySpa() {
       <PromosSection />
       <GallerySection />
       <WhyUsSection />
-
-
       <ContactSection />
       <Footer />
 
