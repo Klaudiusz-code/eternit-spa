@@ -275,7 +275,7 @@ export default function EternitySpa() {
         href={waLink("Cześć! Pytanie o usługi.")}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#C9A84C] text-black rounded-full flex items-center justify-center hover:bg-[#D4B85A] hover:shadow-[0_0_30px_rgba(201,168,76,0.35)] hover:scale-110 transition-all duration-300"
+        className="hiden md:fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#C9A84C] text-black rounded-full flex items-center justify-center hover:bg-[#D4B85A] hover:shadow-[0_0_30px_rgba(201,168,76,0.35)] hover:scale-110 transition-all duration-300"
         aria-label="WhatsApp"
       >
         <MessageCircle className="w-6 h-6" />
